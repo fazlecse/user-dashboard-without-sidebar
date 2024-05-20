@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listpro</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+    <!-- Fontawesome-6 Js link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap 5 Css link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl carousel Css link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Swiper Css link -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- select2 Css link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+
+
+
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+
+</head>
+
+<body onload="preloaderFunction()" class="">
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <figure class="loader">
+            <div class="car">
+                <span class="body"></span>
+                <span class="wheels"></span>
+            </div>
+            <div class="strikes">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </figure>
+    </div>
+    <!-- Preloader section end -->
+
+    <!-- Nav section start -->
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+            <button class="navbar-toggler d-none d-lg-block" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo-white.png"
+                            alt=""></a>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="user-panel.html">
+                                <i class="fa-regular fa-grid-2"></i>overview</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-regular fa-bag-shopping"></i>
+                                order
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="new-order.html">new order</a></li>
+                                <li><a class="dropdown-item" href="mass-order.html">Mass Order</a></li>
+                                <li><a class="dropdown-item" href="#">All Order</a></li>
+                                <li><a class="dropdown-item" href="#">Refill Order</a></li>
+                                <li><a class="dropdown-item" href="#">Drip Feed</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="user-panel-add-fund.html">
+                                <i class="fa-regular fa-wallet"></i>
+                                add found</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-regular fa-timer"></i>
+                                history
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="new-order.html"> found history</a></li>
+                                <li><a class="dropdown-item" href="user-panel-transection.html">transaction</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="user-panel-notice.html">
+                                <i class="fa-regular fa-bullhorn"></i>
+                                notice</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="panels.html">
+                                <i class="fa-regular fa-sliders"></i>
+                                panels</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right ">
+                <ul class="custom-nav header-nav">
+                    <!-- Nav Profile section start -->
+                    <li>
+                        <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                            <i class="fa-light fa-moon" id="moon"></i>
+                            <i class="fa-light fa-sun-bright" id="sun"></i>
+                        </a>
+                    </li>
+                    <!-- Notification section start -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                            <i class="fa-light fa-bell"></i>
+                            <span class="badge badge-number">4</span>
+                        </a>
+                        <!-- Start Notification Dropdown Items -->
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                            <div class="dropdown-header">
+                                You have 4 new notifications
+                                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">clear all</span></a>
+                            </div>
+                            <div class="dropdown-body">
+                                <div class="notification-item">
+                                    <a href="">
+                                        <i class="fa-light fa-circle-exclamation text-warning"></i>
+                                        <div>
+                                            <h4>Lorem Ipsum</h4>
+                                            <p>Quae dolorem earum veritatis oditseno</p>
+                                            <p>30 min. ago</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+
+
+                                <div class="notification-item">
+                                    <a href="">
+                                        <i class="fa-light fa-circle-xmark text-danger"></i>
+                                        <div>
+                                            <h4>Atque rerum nesciunt</h4>
+                                            <p>Quae dolorem earum veritatis oditseno</p>
+                                            <p>1 hr. ago</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="notification-item">
+                                    <a href="">
+                                        <i class="fa-light fa-circle-check text-success"></i>
+                                        <div>
+                                            <h4>Sit rerum fuga</h4>
+                                            <p>Quae dolorem earum veritatis oditseno</p>
+                                            <p>2 hrs. ago</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+
+                                <div class="notification-item">
+                                    <a href="">
+                                        <i class="fa-light fa-circle-info text-primary"></i>
+                                        <div>
+                                            <h4>Dicta reprehenderit</h4>
+                                            <p>Quae dolorem earum veritatis oditseno</p>
+                                            <p>4 hrs. ago</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="#">Show all notifications</a>
+                            </div>
+                        </div>
+                        <!-- End Notification Dropdown Items -->
+
+                    </li>
+                    <!-- Notification section end -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
+                            data-bs-toggle="dropdown">
+                            <img src="assets/img/Person/2.jpg" alt="Profile" class="rounded-circle">
+                            <span class="d-none d-xl-block dropdown-toggle ps-2">John Doe</span>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                            <li class="dropdown-header d-flex justify-content-center align-items-center text-start">
+                                <div class="profile-thum">
+                                    <img src="assets/img/Person/2.jpg" alt="">
+                                </div>
+                                <div class="profile-content">
+                                    <h6>John Doe</h6>
+                                    <span>Content Creator</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="account-settings-profile.html">
+                                    <i class="fa-light fa-user"></i>
+                                    <span>My Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="account-settings-profile.html">
+                                    <i class="fa-sharp fa-light fa-gear"></i>
+                                    <span>Account Settings</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="api.html">
+                                    <i class="fa-light fa-code"></i>
+                                    <span>api</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                                    <i class="fa-light fa-circle-question"></i>
+                                    <span>Need Help?</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <i class="fa-light fa-right-from-bracket"></i>
+                                    <span>Sign Out</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!-- Nav Profile section end -->
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <li class="nav-item">
+            <a onclick="toggleSideMenu()" class="nav-link toggle-sidebar" aria-current="page">
+                <i class="fa-light fa-list"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="fa-regular fa-house"></i></a>
+        </li>
+        <li class="nav-item">
+            <a onclick="searchBar()" class="nav-link search-bar-toggle" href="#"><i
+                    class="fa-regular fa-magnifying-glass"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+        </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+
+
+    <!-- Sidebar section start -->
+    <aside id="sidebar" class="sidebar">
+        <ul class="sidebar-nav" id="sidebar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="user-panel.html">
+                    <i class="fa-regular fa-grid"></i>
+                    <span>dashboard</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="my-listing.html">
+                    <i class="fa-regular fa-list-radio"></i>
+                    <span>my listing</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#crm" data-bs-toggle="collapse" href="#">
+                    <i class="fa-light fa-handshake-simple"></i><span>CRM</span>
+                    <i class="fa-regular fa-angle-down ms-auto bi-chevron-down"></i>
+                </a>
+                <ul id="crm" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="fa-regular fa-circle"></i><span>Email analytcs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="fa-regular fa-circle"></i><span>manage</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#sales" data-bs-toggle="collapse" href="#">
+                    <i class="fa-light fa-bag-shopping"></i><span>sales</span>
+                    <i class="fa-regular fa-angle-down ms-auto bi-chevron-down"></i>
+                </a>
+                <ul id="sales" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="fa-regular fa-circle"></i><span>Email analytcs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="fa-regular fa-circle"></i><span>manage</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#account-settings" data-bs-toggle="collapse" href="#">
+                    <i class="fa-sharp fa-light fa-user"></i><span>Account Settings</span>
+                    <i class="fa-regular fa-angle-down ms-auto bi-chevron-down"></i>
+                </a>
+                <ul id="account-settings" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="account-settings-profile.html">
+                            <i class="fa-regular fa-circle"></i><span>Account</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="account-settings-notifications.html">
+                            <i class="fa-regular fa-circle"></i><span>Notifications</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="account-settings-identity-verification.html">
+                            <i class="fa-regular fa-circle"></i><span>KYC</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#components" data-bs-toggle="collapse" href="#">
+                    <i class="fa-light fa-magnet"></i><span>Components</span>
+                    <i class="fa-regular fa-angle-down ms-auto bi-chevron-down"></i>
+                </a>
+                <ul id="components" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="components-alerts.html">
+                            <i class="fa-regular fa-circle"></i><span>Alerts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-regular fa-circle"></i><span>Accordion</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="user-panel-notice.html">
+                    <i class="fa-light fa-bullhorn"></i>
+                    <span>notice</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="user-panel-add-fund.html">
+                    <i class="fa-light fa-wallet"></i>
+                    <span>add fund</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="panels.html">
+                    <i class="fa-light fa-box"></i>
+                    <span>panels</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="user-panel-transection.html">
+                    <i class="fa-light fa-arrow-right-arrow-left"></i>
+                    <span>transaction</span>
+                </a>
+            </li>
+        </ul>
+
+    </aside>
+    <!-- Sidebar section end -->
+    <div class="dashboard-wrapper">
+        <div class="breadcrumb-area">
+            <h3 class="title">chat widget</h3>
+        </div>
+        <!-- Chat widget section start -->
+        <div class="chat-widget-section">
+            <div class="row gap-3">
+                <div class="col-12">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="title">listpro</div>
+                        <a href="" class="cmn-btn"><i class="fa-regular fa-circle-plus"></i>add widget</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row  gap-3">
+                            <div class="col-12">
+                                <label for="exampleInputEmail1" class="form-label">
+                                    <h6><i class="fa-regular fa-pen-to-square"></i>Widget Name</h6>
+                                </label>
+                                <div class="input-box">
+                                    <input type="email" class="form-control" value="listpro" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <a href="" class="cmn-btn3">save</a>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="flexSwitchCheckDefault" class="form-label">
+                                    <h6><i class="fa-regular fa-chart-line-up"></i>Widget Status</h6>
+                                </label>
+                                <div class="card">
+                                    <div class="card-body d-flex justify-content-between">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch"
+                                                id="flexSwitchCheckDefault">
+                                        </div>
+                                        <span class="status">active</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="Widget ID" class="form-label">
+                                    <h6><i class="fa-regular fa-fingerprint"></i>Widget ID</h6>
+                                </label>
+                                <input type="email" class="form-control" value="listpro" id="Widget ID"
+                                    aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">
+                            <h6><i class="fa-regular fa-code"></i>Widget code</h6>
+                        </label>
+                        <div class="textarea-box">
+                            <textarea class="form-control" placeholder="aaaaaaa" rows="9"></textarea>
+                            <div class="btn-area">
+                                <a href="" class="cmn-btn"><i class="fa-regular fa-messages"></i> Copy to Clipboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <label for="Direct Chat Link" class="form-label d-flex align-items-center gap-2">
+                            <h6><i class="fa-regular fa-link"></i>Direct Chat Link </h6>
+                            <a href="" class="link">Learn more</a>
+                        </label>
+                        <div class="input-box">
+                            <input type="email" class="form-control" value="listpro" id="Direct Chat Link"
+                                aria-describedby="emailHelp">
+                            <a href="" class="cmn-btn3">Copy</a>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="" class="form-label">
+                                    <h6><i class="fa-regular fa-message-text"></i>Widget Appearance</h6>
+                                </label>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <label for="exampleColorInput" class="form-label">Widget Color</label>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <input type="color" class="form-control form-control-color"
+                                                id="exampleColorInput" value="#ff6500" title="Choose your color">
+                                            <span class="flex-grow-1">#ff6500</span>
+                                            <a href="" class="cmn-btn3" data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdrop">advanced</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="" class="form-label">
+                                    <h6><i class="fa-regular fa-message-text"></i>Widget Content</h6>
+                                </label>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <label class="form-label">Language</label>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <select class="cmn-select2" name="state">
+                                                <option value="AL">Select</option>
+                                                <option value="AL">Bangladesh</option>
+                                                <option value="WY">Australia</option>
+                                                <option value="WY">Belarus</option>
+                                                <option value="WY">Canada</option>
+                                                <option value="WY">China</option>
+                                                <option value="WY">France</option>
+                                                <option value="WY">Germany</option>
+                                                <option value="WY">India</option>
+                                                <option value="WY">Indonesia</option>
+                                                <option value="WY">Italy</option>
+                                                <option value="WY">Japan</option>
+                                                <option value="WY">Korea</option>
+                                            </select>
+
+                                            <a href="" class="cmn-btn3">edit content</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <label for="" class="form-label">
+                                <h6><i class="fa-regular fa-message-text"></i>Scheduler</h6>
+                            </label>
+                            <div class="col-md-6">
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <label class="form-label">Timezone</label>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <select class="cmn-select2" name="state">
+                                                <option value="AL">Select</option>
+                                                <option value="AL">Bangladesh</option>
+                                                <option value="WY">Australia</option>
+                                                <option value="WY">Belarus</option>
+                                                <option value="WY">Canada</option>
+                                                <option value="WY">China</option>
+                                                <option value="WY">France</option>
+                                                <option value="WY">Germany</option>
+                                                <option value="WY">India</option>
+                                                <option value="WY">Indonesia</option>
+                                                <option value="WY">Italy</option>
+                                                <option value="WY">Japan</option>
+                                                <option value="WY">Korea</option>
+                                            </select>
+
+                                            <a href="" class="cmn-btn3">edit Timezone</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <label class="form-label">Schedule</label>
+                                        <div class="d-flex align-items-center gap-3">
+                                            <select class="cmn-select2" name="state">
+                                                <option value="AL">Select</option>
+                                                <option value="AL">Bangladesh</option>
+                                                <option value="WY">Australia</option>
+                                                <option value="WY">Belarus</option>
+                                                <option value="WY">Canada</option>
+                                                <option value="WY">China</option>
+                                                <option value="WY">France</option>
+                                                <option value="WY">Germany</option>
+                                                <option value="WY">India</option>
+                                                <option value="WY">Indonesia</option>
+                                                <option value="WY">Italy</option>
+                                                <option value="WY">Japan</option>
+                                                <option value="WY">Korea</option>
+                                            </select>
+
+                                            <a href="" class="cmn-btn3">advanced</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="" class="form-label">
+                            <h6><i class="fa-regular fa-lock"></i>Consent Form</h6>
+                        </label>
+                        <div class="card">
+                            <div class="card-body">
+                                <label class="form-label">Display Option</label>
+                                <div class="d-flex align-items-center gap-3">
+                                    <select class="cmn-select2" name="state">
+                                        <option value="AL">Select</option>
+                                        <option value="AL">Bangladesh</option>
+                                        <option value="WY">Australia</option>
+                                        <option value="WY">Belarus</option>
+                                        <option value="WY">Canada</option>
+                                        <option value="WY">China</option>
+                                        <option value="WY">France</option>
+                                        <option value="WY">Germany</option>
+                                        <option value="WY">India</option>
+                                        <option value="WY">Indonesia</option>
+                                        <option value="WY">Italy</option>
+                                        <option value="WY">Japan</option>
+                                        <option value="WY">Korea</option>
+                                    </select>
+
+                                    <a href="" class="cmn-btn3">edit content</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="" class="form-label">
+                            <h6><i class="fa-regular fa-lock"></i>Widget Behavior</h6>
+                        </label>
+                        <div class="card">
+                            <div class="card-body">
+                                <label class="form-label">Display Option</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row g-2">
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Hide estimated wait time" checked>
+                                                    <label class="form-check-label" for="Hide estimated wait time">Hide
+                                                        estimated wait time</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disable sound notification">
+                                                    <label class="form-check-label"
+                                                        for="Disable sound notification">Disable sound
+                                                        notification</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disable message preview">
+                                                    <label class="form-check-label"
+                                                        for="Disable message preview">Disable message preview
+                                                        on desktop</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disable message preview on mobile">
+                                                    <label class="form-check-label"
+                                                        for="Disable message preview on mobile">Disable message preview
+                                                        on mobile</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row g-2">
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disable agent typing notification">
+                                                    <label class="form-check-label"
+                                                        for="Disable agent typing notification">Disable agent typing
+                                                        notification</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disable visitor typing function">
+                                                    <label class="form-check-label"
+                                                        for="Disable visitor typing function">Disable visitor typing
+                                                        function</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disable browser tab notification">
+                                                    <label class="form-check-label"
+                                                        for="Disable browser tab notification">Disable browser tab
+                                                        notification</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <label class="form-label">Visibility Settings</label>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Hide widget when offline">
+                                                    <label class="form-check-label" for="Hide widget when offline">Hide
+                                                        widget when offline</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Hide widget on load in desktop">
+                                                    <label class="form-check-label"
+                                                        for="Hide widget on load in desktop">Hide widget on load in
+                                                        desktop</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Hide widget on load in mobile">
+                                                    <label class="form-check-label"
+                                                        for="Hide widget on load in mobile">Hide widget on load in
+                                                        mobile</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <label class="form-label">Feature Settings</label>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disable emoji selection">
+                                                    <label class="form-check-label"
+                                                        for="Disable emoji selection">Disable emoji selection</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disable file upload">
+                                                    <label class="form-check-label" for="Disable file upload">Disable
+                                                        file upload</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disable chat rating">
+                                                    <label class="form-check-label" for="Disable chat rating">Disable
+                                                        chat rating</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disable email transcript">
+                                                    <label class="form-check-label"
+                                                        for="Disable email transcript">Disable email transcript</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <label class="form-label">On Click Behavior</label>
+                                <div class="w-100 d-flex">
+                                    <select class="cmn-select2" name="state">
+                                        <option value="AL">Select</option>
+                                        <option value="AL">Bangladesh</option>
+                                        <option value="WY">Australia</option>
+                                        <option value="WY">Belarus</option>
+                                        <option value="WY">Canada</option>
+                                        <option value="WY">China</option>
+                                        <option value="WY">France</option>
+                                        <option value="WY">Germany</option>
+                                        <option value="WY">India</option>
+                                        <option value="WY">Indonesia</option>
+                                        <option value="WY">Italy</option>
+                                        <option value="WY">Japan</option>
+                                        <option value="WY">Korea</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="" class="form-label">
+                            <h6><i class="fa-regular fa-ban"></i>Availability Restriction</h6>
+                        </label>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <label class="form-label">Domain Restriction</label>
+                                            <div class="d-flex align-items-center g-3">
+                                                <div class="form-check form-switch flex-grow-1">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disabled, Configure to Enable">
+                                                    <label class="form-check-label"
+                                                        for="Disabled, Configure to Enable">Disabled, Configure to
+                                                        Enable</label>
+                                                </div>
+                                                <a href="" class="cmn-btn3">configure</a>
+                                            </div>
+                                            <p>By default, the code will work on all the domains and URLs where it has
+                                                been inserted. To show or hide the widget on one or more specific domain
+                                                or URLs, enable this functionality and specify the rule.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <label class="form-label">Country Restriction</label>
+                                            <div class="d-flex align-items-center g-3">
+                                                <div class="form-check form-switch flex-grow-1">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disabled, Configure to Enable">
+                                                    <label class="form-check-label"
+                                                        for="Disabled, Configure to Enable">Disabled, Configure to
+                                                        Enable</label>
+                                                </div>
+                                                <a href="" class="cmn-btn3">configure</a>
+                                            </div>
+                                            <p>By default, the widget will be shown to all visitors. To show or hide the
+                                                widget for visitors from specific countries, enable this functionality
+                                                and specify the countries.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row g-2">
+                                            <label class="form-label">Platform Restriction</label>
+                                            <div class="d-flex align-items-center g-3">
+                                                <div class="form-check form-switch flex-grow-1">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="Disabled, Configure to Enable">
+                                                    <label class="form-check-label"
+                                                        for="Disabled, Configure to Enable">Disabled, Configure to
+                                                        Enable</label>
+                                                </div>
+                                                <a href="" class="cmn-btn3">configure</a>
+                                            </div>
+                                            <p>By default, the widget will be shown to all visitors. To show or hide the
+                                                widget for visitors from specific platforms, enable this functionality
+                                                and specify the platforms.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <a href="" class="delete-btn">delete widget</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat widget section end -->
+
+    </div>
+    <!-- End #main -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Offcanvas sidebar start -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Product Filter</h5>
+            <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-light fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+                <div class="row g-4">
+                    <div>
+                        <label for="ProductName" class="form-label">Product Name</label>
+                        <input type="text" class="form-control" id="ProductName">
+                    </div>
+                    <div>
+                        <label for="NumberOfSales" class="form-label">Number of sales</label>
+                        <input type="text" class="form-control" id="NumberOfSales">
+                    </div>
+                    <div id="formModal">
+                        <label class="form-label">status</label>
+                        <select class="modal-select" name="state">
+                            <option value="AL">All status</option>
+                            <option value="AL">Bangladesh</option>
+                            <option value="WY">Australia</option>
+                            <option value="WY">Belarus</option>
+                            <option value="WY">Canada</option>
+                            <option value="WY">China</option>
+                            <option value="WY">France</option>
+                            <option value="WY">Germany</option>
+                            <option value="WY">India</option>
+                            <option value="WY">Indonesia</option>
+                            <option value="WY">Italy</option>
+                            <option value="WY">Japan</option>
+                            <option value="WY">Korea</option>
+                        </select>
+                    </div>
+                    <div class="btn-area">
+                        <button type="submit" class="cmn-btn">Filter</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!-- Offcanvas sidebar end -->
+
+    <!-- Modal section start -->
+    <div class="modal" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="staticBackdropLabel">WIDGET APPEARANCE</h1>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-light fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="widget-settings">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <h6 class="mb-2">Desktop Widget</h6>
+                                        <div class="card p-2">
+                                            <div class="">
+                                                <div class="row g-3">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="flexRadioDefault" id="flexRadioDefault1">
+                                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                                <div class="widget-round">
+                                                                    <i class="fa-regular fa-comment-text"></i>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="flexRadioDefault" id="flexRadioDefault2">
+                                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                                <div class="widget-rectangle">
+                                                                    online
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row align-items-center g-3">
+                                            <div class="col-xxl-6 col-lg-4">
+                                                <div class="card p-2">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div>
+                                                                <label for="Width" class="form-label">Width</label>
+                                                                <input type="text" class="form-control" id="Width"
+                                                                    value="350" aria-describedby="emailHelp">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div>
+                                                                <label for="Height" class="form-label">Height</label>
+                                                                <input type="text" class="form-control" id="Height"
+                                                                    value="520" aria-describedby="emailHelp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xxl-6 col-lg-8">
+                                                <div class="card p-2">
+                                                    <label class="form-label">Desktop Widget Position</label>
+                                                    <div class="widget-pos-selector-area">
+                                                        <div class="row g-2">
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="top-right">
+                                                                    <label class="form-check-label" for="top-right">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="top-left">
+                                                                    <label class="form-check-label" for="top-left">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="center-right">
+                                                                    <label class="form-check-label" for="center-right">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="center-left">
+                                                                    <label class="form-check-label" for="center-left">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="bottom-right"
+                                                                        checked>
+                                                                    <label class="form-check-label" for="bottom-right">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="bottom-left">
+                                                                    <label class="form-check-label" for="bottom-left">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card p-2">
+                                            <label class="form-label">Attention Grabber</label>
+                                            <div class="row align-items-center g-3">
+                                                <div class="col-xl-6">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-6">
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    role="switch" id="flexSwitchCheckChecked" checked>
+                                                                <label class="form-check-label"
+                                                                    for="flexSwitchCheckChecked">
+                                                                    Enabled</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <a href="" class="cmn-btn w-100">gallery</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckChecked2">
+                                                        <label class="form-check-label" for="flexSwitchCheckChecked2">
+                                                            Match widget with bubble theme.</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <h6 class="mb-2">Mobile Widget</h6>
+                                        <div class="card p-2">
+                                            <div class="">
+                                                <div class="row g-3">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="flexRadioDefault" id="flexRadioDefault3">
+                                                            <label class="form-check-label" for="flexRadioDefault3">
+                                                                <div class="widget-round">
+                                                                    <i class="fa-regular fa-comment-text"></i>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="flexRadioDefault" id="flexRadioDefault4">
+                                                            <label class="form-check-label" for="flexRadioDefault4">
+                                                                <div class="widget-rectangle">
+                                                                    <i class="fa-regular fa-comment-text"></i> chat
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-xxl-6 col-lg-8">
+                                                <div class="card p-2">
+                                                    <label class="form-label">Desktop Widget Position</label>
+                                                    <div class="widget-pos-selector-area">
+                                                        <div class="row g-2">
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="m-top-right">
+                                                                    <label class="form-check-label" for="m-top-right">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="m-top-left">
+                                                                    <label class="form-check-label" for="m-top-left">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="m-center-right">
+                                                                    <label class="form-check-label"
+                                                                        for="m-center-right">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="m-center-left">
+                                                                    <label class="form-check-label" for="m-center-left">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="m-bottom-right"
+                                                                        checked>
+                                                                    <label class="form-check-label"
+                                                                        for="m-bottom-right">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="m-bottom-left">
+                                                                    <label class="form-check-label" for="m-bottom-left">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <h6 class="mb-2">Widget Colors</h6>
+                                        <div class="card p-2">
+                                            <div class="row g-3">
+                                                <div class="col-lg-4 col-sm-6">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <input type="color" class="form-control form-control-color"
+                                                            id="exampleColorInput" value="#ff6500"
+                                                            title="Choose your color">
+                                                        <label for="exampleColorInput"
+                                                            class="form-label mb-0">Header</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-sm-6">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <input type="color" class="form-control form-control-color"
+                                                            id="exampleColorInput" value="#ffffff"
+                                                            title="Choose your color">
+                                                        <label for="exampleColorInput" class="form-label mb-0">Header
+                                                            Text</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-sm-6">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <input type="color" class="form-control form-control-color"
+                                                            id="exampleColorInput" value="#ff6500"
+                                                            title="Choose your color">
+                                                        <label for="exampleColorInput" class="form-label mb-0">Agent
+                                                            Message</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-sm-6">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <input type="color" class="form-control form-control-color"
+                                                            id="exampleColorInput" value="#ffffff"
+                                                            title="Choose your color">
+                                                        <label for="exampleColorInput" class="form-label mb-0">Agent
+                                                            Text</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-sm-6">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <input type="color" class="form-control form-control-color"
+                                                            id="exampleColorInput" value="#ffffff"
+                                                            title="Choose your color">
+                                                        <label for="exampleColorInput" class="form-label mb-0">Visitor
+                                                            Message</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-sm-6">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <input type="color" class="form-control form-control-color"
+                                                            id="exampleColorInput" value="#1B1C20"
+                                                            title="Choose your color">
+                                                        <label for="exampleColorInput" class="form-label mb-0">Visitor
+                                                            Text</label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="widget-preview-section">
+                                <h6 class="mb-2">Desktop widget preview</h6>
+                                <div class="card h-100">
+                                    <div class="card-body h-100">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer mt-10">
+                    <button type="button" class="cmn-btn" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal section end -->
+
+
+
+
+
+
+
+    <!-- Jquery Js link -->
+    <!-- <script src="assets/js/jquery-3.6.1.min.js"></script> -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Js link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- Owl carousel Js link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+
+    <!-- Main Js slink -->
+    <script src="assets/js/dashboard.js"></script>
+
+</body>
+
+</html>
