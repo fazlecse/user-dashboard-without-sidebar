@@ -108,6 +108,31 @@
                                 <i class="fa-regular fa-sliders"></i>
                                 panels</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-regular fa-grid-2-plus"></i>
+                                more
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="user-panel-report.html">
+                                        <i class="fa-regular fa-memo"></i>
+                                        report
+                                    </a></li>
+                                <li><a class="dropdown-item" href="chat.html">
+                                        <i class="fa-brands fa-rocketchat"></i>
+                                        chat
+                                    </a></li>
+                                <li><a class="dropdown-item" href="api.html">
+                                        <i class="fa-regular fa-code"></i>
+                                        api
+                                    </a></li>
+                                <li><a class="dropdown-item" href="components-alerts.html">
+                                        <i class="fa-regular fa-magnet"></i>
+                                        components
+                                    </a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -188,6 +213,7 @@
 
                     </li>
                     <!-- Notification section end -->
+
                     <li class="nav-item dropdown">
                         <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
                             data-bs-toggle="dropdown">
@@ -220,7 +246,7 @@
                             </li>
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="api.html">
-                                    <i class="fa-light fa-code"></i>
+                                    <i class="fa-regular fa-code"></i>
                                     <span>api</span>
                                 </a>
                             </li>
@@ -240,7 +266,6 @@
                         </ul>
                     </li>
                     <!-- Nav Profile section end -->
-
                 </ul>
             </div>
         </div>
@@ -426,6 +451,8 @@
         <div class="breadcrumb-area">
             <h3 class="title">overview</h3>
         </div>
+
+
         <!-- Card section start -->
         <div class="mb-30 ">
             <div class="row">
@@ -488,6 +515,31 @@
         </div>
         <!-- Card section end -->
 
+        <!-- Chart section start -->
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Transaction</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="columnChart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>gross value</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="lineChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Chart section end -->
+
         <!-- Cmn table section start -->
         <div class="card mt-30">
             <div class="card-header d-flex justify-content-between align-items-center border-0 flex-wrap gap-3">
@@ -509,7 +561,7 @@
         </button> -->
                 </div>
             </div>
-            <div class="card-body">
+            <div class="card-body pt-0">
                 <div class="cmn-table">
                     <div class="table-responsive">
                         <table class="table table-striped align-middle">
@@ -962,6 +1014,8 @@
     <script src="assets/js/select2.min.js"></script>
     <!-- Owl carousel Js link -->
     <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Apexcharts Js link -->
+    <script src="assets/js/apexcharts.min.js"></script>
 
 
     <!-- Main Js slink -->

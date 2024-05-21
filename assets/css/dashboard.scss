@@ -34,7 +34,8 @@ Typography
     --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
     --bg-color1: #ffffff;
     --bg-color2: #F6F8FA;
-    --bg-color3: #050B20;
+    --bg-color3: #ffffff;
+    --bg-color4: #ffffff;
 
 
     --border-color1: rgba(231, 234, 243, .7);
@@ -84,17 +85,16 @@ Typography
 Dark theme section start
 ----------------------------------------------*/
 .dark-theme {
-    --bg-color1: #0e0122;
-    --bg-color2: #11052c;
-    --bg-color3: #161243;
-    --bg-color4: #2c2979;
-    --bg-color5: #2c2979;
+    --bg-color1: #1C1C1E;
+    --bg-color2: #161618;
+    --bg-color3: #232327;
+    --bg-color4: #353539;
     --heading-color: #ffffff;
-    --border-color1: rgb(44, 41, 121, .7);
+    --border-color1: #303031;
     --border-color2: rgba(234, 219, 215, 0.06);
     --border-color3: #ffffff;
     --bg-grad-color: #253A33;
-    --input-color: var(--bg-color2);
+    --input-color: var(--bg-color3);
     --body-color: #d1cbdb;
 
     p {
@@ -123,7 +123,7 @@ Dark theme section start
     }
 
     .select2-container--default .select2-selection--single {
-        background-color: var(--bg-color2);
+        background-color: var(--bg-color3);
     }
 
     .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -143,7 +143,6 @@ Dark theme section start
 
     .cmn-btn3 {
         background-color: var(--bg-color3);
-        border-color: var(--bg-color3);
         color: hsl(var(--white));
     }
 
@@ -464,7 +463,7 @@ body {
 
 body.dark-theme {
     color: #d1cbdb;
-    background-color: #00150F;
+    background-color: var(--bg-color2);
 
 }
 
@@ -657,7 +656,7 @@ textarea.form-control {
         transition: var(--transition);
         gap: 15px;
         border: 1px solid var(--border-color1);
-        background-color: var(--bg-color1);
+        background-color: var(--bg-color4);
     }
 }
 
@@ -775,6 +774,7 @@ img.img-flag {
     background: hsl(var(--white));
     font-size: 15px;
     padding: .375rem 15px;
+    border-radius: 10px;
 }
 
 
@@ -1679,7 +1679,7 @@ Offcanvas section end
     border: 1px solid;
     border-right: 2px solid;
     border-left: 15px solid;
-    background-color: var(--bg-color1);
+    background-color: var(--bg-color4);
 
     // box-shadow: 0px 3px 3px #BABABA;
     .icon-area {
@@ -2108,7 +2108,7 @@ hr.divider:after {
     padding: 8px;
     border: none;
     box-shadow: var(--shadow3);
-    background-color: var(--bg-color1);
+    background-color: var(--bg-color3);
     color: var(--heading-color);
     font-size: 15px;
 
@@ -2185,7 +2185,7 @@ Cmn table start
     tbody {
         td {
             padding: 15px 10px;
-            background-color: var(--bg-color1);
+            background-color: var(--bg-color3);
 
             .icon-area {
                 width: 50px;
@@ -2389,11 +2389,12 @@ Cmn table start
         table {
             color: hsl(var(--white));
 
+
             thead {
                 tr {
                     th {
                         color: hsl(var(--white));
-                        background-color: var(--bg-color5);
+                        background-color: var(--bg-color4);
                     }
                 }
             }
@@ -2571,7 +2572,7 @@ Chat section start
 .message-container {
     box-shadow: var(--shadow1);
     border: 1px solid var(--border-color1);
-    background-color: var(--bg-color1);
+    background-color: var(--bg-color3);
     border-radius: 5px;
     min-height: 500px;
 
@@ -2672,7 +2673,7 @@ Chat section start
             .message-text {
                 border-top-left-radius: 15px;
                 border-top-right-radius: 0;
-                background: var(--bg-color1 );
+                background: var(--bg-color1);
                 color: var(--heading-color);
             }
 
@@ -2908,8 +2909,8 @@ Chat section start
 
 // Rtl caht seciton end
 // Dark theme chat section start
-.dark-theme {
-    .message-container .chat-box {
+.dark-theme{
+    .message-container .chat-box{
         background-color: var(--bg-color1);
     }
 }
@@ -2972,6 +2973,7 @@ Chat section end
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: var(--bg-color3);
 
     .thumbs-area {
         img {
@@ -2985,6 +2987,14 @@ Chat section end
     }
 }
 
+// Dark theme user area start
+.dark-theme {
+    .user-data-area {
+        box-shadow: none;
+    }
+}
+
+// Dark theme user area end
 // User data area end
 
 // cmn list start
@@ -3000,6 +3010,7 @@ Chat section end
             margin-bottom: 10px;
             padding-bottom: 10px;
         }
+
         .icon {
             width: 35px;
             min-width: 35px;
@@ -3314,7 +3325,7 @@ Padding bottom
     display: block;
     color: var(--body-color);
     height: 100%;
-    background-color: var(--bg-color1);
+    background-color: var(--bg-color3);
 
     &:hover {
         box-shadow: var(--shadow1);
@@ -3473,7 +3484,7 @@ Padding bottom
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
 
     .cmn-btn2 {
         padding: 10px 30px;
@@ -3495,6 +3506,20 @@ Padding bottom
     }
 }
 
+// Responsive balance card start
+@media(max-width: 991px) {
+    .balance-card {
+        margin-top: 30px;
+    }
+}
+
+@media(max-width: 767px) {
+    .balance-card {
+        flex-direction: column;
+    }
+}
+
+// Responsive balance card end
 // Balance card end
 
 // Progress area start
@@ -3549,6 +3574,14 @@ Padding bottom
     }
 }
 
+// Dark theme bottom mobile tab nav section start
+.dark-theme {
+    .bottom-nav {
+        box-shadow: none;
+    }
+}
+
+// Dark theme bottom mobile tab nav section end
 // ---------------------------------------------------- 
 // Bottom Mobile Tab nav section end
 // ----------------------------------------------------
@@ -4046,13 +4079,28 @@ Header section start
 }
 
 // Responsive dashboard wrapper section start
-@media(max-width: 767px) {
+@media(max-width: 1199px) {
     .dashboard-wrapper {
         padding: 30px 20px;
     }
 }
 
+@media(max-width: 767px) {
+    .dashboard-wrapper {
+        margin: 67px 10px 10px;
+        padding: 15px 10px;
+    }
+}
+
 // Responsive dashboard wrapper section end
+// Dark theme dashboard wrapper section start
+.dark-theme {
+    .dashboard-wrapper {
+        box-shadow: none;
+    }
+}
+
+// Dark theme dashboard wrapper section end
 // Dashboard wrapper section end
 /*-----------------------------------------------
 Sidebar start
@@ -4333,17 +4381,17 @@ Main section start
 
 /*----------------------------------------------
     Card section start
-    ----------------------------------------------*/
+----------------------------------------------*/
 .card {
     border-radius: 10px;
     box-shadow: var(--shadow1);
     border: none;
-    background-color: var(--bg-color1);
+    background-color: var(--bg-color3);
     border: 1px solid var(--border-color1);
 
     .card-header {
         padding: 20px;
-        background-color: var(--bg-color1);
+        background-color: var(--bg-color3);
         border-bottom: 1px solid var(--border-color1);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -4375,6 +4423,14 @@ Main section start
 }
 
 // Responsive card end
+// Dark theme card start
+.dark-theme {
+    .card {
+        box-shadow: none;
+    }
+}
+
+// Dark theme card end
 /*----------------------------------------------
     Card section end
 ----------------------------------------------*/
@@ -4393,6 +4449,7 @@ Main section start
     align-items: center;
     border: 2px solid var(--border-color1);
     border-radius: 10px;
+    background-color: var(--bg-color3);
 }
 
 .nice-select .option {
@@ -4406,6 +4463,7 @@ Main section start
 .nice-select .list {
     min-width: 200px;
     width: 100%;
+    background-color: var(--bg-color3);
 }
 
 .nice-select .option:hover,
@@ -4805,8 +4863,7 @@ Payment section start
         transition: var(--transition);
         gap: 15px;
         border: 1px solid var(--border-color1);
-        background-color: var(--bg-color1);
-
+        background-color: var(--bg-color4);
 
         .image-area {
 
@@ -4854,6 +4911,9 @@ Payment section start
 
 // Transfer details section start
 .transfer-details-section {
+    max-width: 560px;
+    margin: auto;
+
     .link {
         color: var(--heading-color);
     }
@@ -5110,7 +5170,7 @@ Notice card section start
     box-shadow: var(--shadow1);
     padding: 20px;
     border-radius: 5px;
-    background-color: var(--bg-color1);
+    background-color: var(--bg-color3);
 
     &:not(:last-child) {
         margin-bottom: 20px;
@@ -5252,6 +5312,7 @@ Map section end
 
 .transaction-list {
     margin-top: 30px;
+    overflow: auto;
 
     .item {
         display: flex;
@@ -5272,6 +5333,7 @@ Map section end
 
             .icon {
                 width: 30px;
+                min-width: 30px;
                 height: 30px;
                 border-radius: 50%;
                 display: flex;
@@ -5304,6 +5366,10 @@ Map section end
 /*----------------------------------------------
 04. Calculator section start
 ----------------------------------------------*/
+.calculator-section {
+    max-width: 560px;
+    margin: auto;
+}
 
 .calculator {
     // max-width: 560px;
@@ -5325,6 +5391,7 @@ Map section end
     border: 2px solid var(--border-color1);
     border-radius: 8px;
     padding: 15px;
+    background-color: var(--bg-color3);
 
     // box-shadow: var(--shadow1);
     .item {
@@ -5361,7 +5428,7 @@ Map section end
     }
 
     .input-amount-wrapper {
-        background-color: var(--bg-color1);
+        background-color: var(--bg-color3);
         border-radius: 8px;
         padding: 12px 14px;
         z-index: 1;
@@ -5508,13 +5575,6 @@ Map section end
         }
     }
 
-
-}
-
-@media (max-width: 575px) {
-    .calculator .calculator-body {
-        padding: 15px;
-    }
 
 }
 
@@ -5725,4 +5785,12 @@ Report section start
 
 /*----------------------------------------------
 Report section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Chart section start
+----------------------------------------------*/
+
+/*----------------------------------------------
+Chart section end
 ----------------------------------------------*/

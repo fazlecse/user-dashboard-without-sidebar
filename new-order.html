@@ -95,7 +95,7 @@
                                 history
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="new-order.html"> found history</a></li>
+                                <li><a class="dropdown-item" href="user-panel-transection.html">found history</a></li>
                                 <li><a class="dropdown-item" href="user-panel-transection.html">transaction</a></li>
                             </ul>
                         </li>
@@ -108,6 +108,31 @@
                             <a class="nav-link" href="panels.html">
                                 <i class="fa-regular fa-sliders"></i>
                                 panels</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-regular fa-grid-2-plus"></i>
+                                more
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="user-panel-report.html">
+                                        <i class="fa-regular fa-memo"></i>
+                                        report
+                                    </a></li>
+                                <li><a class="dropdown-item" href="chat.html">
+                                        <i class="fa-brands fa-rocketchat"></i>
+                                        chat
+                                    </a></li>
+                                <li><a class="dropdown-item" href="api.html">
+                                        <i class="fa-regular fa-code"></i>
+                                        api
+                                    </a></li>
+                                <li><a class="dropdown-item" href="components-alerts.html">
+                                        <i class="fa-regular fa-magnet"></i>
+                                        components
+                                    </a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -221,7 +246,7 @@
                             </li>
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="api.html">
-                                    <i class="fa-light fa-code"></i>
+                                    <i class="fa-regular fa-code"></i>
                                     <span>api</span>
                                 </a>
                             </li>
@@ -585,8 +610,8 @@
             </div>
 
         </div>
-    </main>
-    <!-- Main section start -->
+        </main>
+        <!-- Main section start -->
 
 
 
@@ -597,75 +622,76 @@
 
 
 
-    <!-- Offcanvas sidebar start -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Product Filter</h5>
-            <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-                <i class="fa-light fa-arrow-right"></i>
-            </button>
+        <!-- Offcanvas sidebar start -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Product Filter</h5>
+                <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="fa-light fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <form>
+                    <div class="row g-4">
+                        <div>
+                            <label for="ProductName" class="form-label">Product Name</label>
+                            <input type="text" class="form-control" id="ProductName">
+                        </div>
+                        <div>
+                            <label for="NumberOfSales" class="form-label">Number of sales</label>
+                            <input type="text" class="form-control" id="NumberOfSales">
+                        </div>
+                        <div id="formModal">
+                            <label class="form-label">status</label>
+                            <select class="modal-select" name="state">
+                                <option value="AL">All status</option>
+                                <option value="AL">Bangladesh</option>
+                                <option value="WY">Australia</option>
+                                <option value="WY">Belarus</option>
+                                <option value="WY">Canada</option>
+                                <option value="WY">China</option>
+                                <option value="WY">France</option>
+                                <option value="WY">Germany</option>
+                                <option value="WY">India</option>
+                                <option value="WY">Indonesia</option>
+                                <option value="WY">Italy</option>
+                                <option value="WY">Japan</option>
+                                <option value="WY">Korea</option>
+                            </select>
+                        </div>
+                        <div class="btn-area">
+                            <button type="submit" class="cmn-btn">Filter</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
         </div>
-        <div class="offcanvas-body">
-            <form>
-                <div class="row g-4">
-                    <div>
-                        <label for="ProductName" class="form-label">Product Name</label>
-                        <input type="text" class="form-control" id="ProductName">
-                    </div>
-                    <div>
-                        <label for="NumberOfSales" class="form-label">Number of sales</label>
-                        <input type="text" class="form-control" id="NumberOfSales">
-                    </div>
-                    <div id="formModal">
-                        <label class="form-label">status</label>
-                        <select class="modal-select" name="state">
-                            <option value="AL">All status</option>
-                            <option value="AL">Bangladesh</option>
-                            <option value="WY">Australia</option>
-                            <option value="WY">Belarus</option>
-                            <option value="WY">Canada</option>
-                            <option value="WY">China</option>
-                            <option value="WY">France</option>
-                            <option value="WY">Germany</option>
-                            <option value="WY">India</option>
-                            <option value="WY">Indonesia</option>
-                            <option value="WY">Italy</option>
-                            <option value="WY">Japan</option>
-                            <option value="WY">Korea</option>
-                        </select>
-                    </div>
-                    <div class="btn-area">
-                        <button type="submit" class="cmn-btn">Filter</button>
-                    </div>
-                </div>
+        <!-- Offcanvas sidebar end -->
 
-            </form>
-        </div>
-    </div>
-    <!-- Offcanvas sidebar end -->
+        <!-- Modal section start -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="staticBackdropLabel">Modal title</h1>
+                        <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa-light fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Modal body
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="cmn-btn" data-bs-dismiss="modal">Close</button>
 
-    <!-- Modal section start -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title" id="staticBackdropLabel">Modal title</h1>
-                    <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="fa-light fa-xmark"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Modal body
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="cmn-btn" data-bs-dismiss="modal">Close</button>
-
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Modal section end -->
+        <!-- Modal section end -->
 
 
 
@@ -677,20 +703,20 @@
 
 
 
-    <!-- Jquery Js link -->
-    <!-- <script src="assets/js/jquery-3.6.1.min.js"></script> -->
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <!-- Jquery Js link -->
+        <!-- <script src="assets/js/jquery-3.6.1.min.js"></script> -->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
 
-    <!-- Bootstrap Js link -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- select2_Js_link -->
-    <script src="assets/js/select2.min.js"></script>
-    <!-- select2_Js_link -->
-    <script src="assets/js/owl.carousel.min.js"></script>
+        <!-- Bootstrap Js link -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!-- select2_Js_link -->
+        <script src="assets/js/select2.min.js"></script>
+        <!-- select2_Js_link -->
+        <script src="assets/js/owl.carousel.min.js"></script>
 
 
-    <!-- Main Js slink -->
-    <script src="assets/js/dashboard.js"></script>
+        <!-- Main Js slink -->
+        <script src="assets/js/dashboard.js"></script>
 
 </body>
 
