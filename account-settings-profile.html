@@ -452,170 +452,177 @@
 
 
     <div class="dashboard-wrapper">
-
-        <div class="breadcrumb-area">
-            <h3 class="title">profile</h3>
-        </div>
-
         <div class="row">
-            <!-- Account-settings -->
-            <!-- Account settings navbar start -->
-            <div class="account-settings-navbar">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="account-settings-profile.html"><i
-                                class="fa-regular fa-user"></i>profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="account-settings-notifications.html"><i
-                                class="fa-regular fa-link"></i>Notification</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="account-settings-identity-verification.html"><i
-                                class="fa-regular fa-link"></i> Identity Verification</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Account settings navbar end -->
-            <form>
-                <div class="account-settings-profile-section">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="card-title">Profile Details
-                            </h5>
-                            <div class="profile-details-section">
-                                <div class="d-flex gap-3 align-items-center">
-                                    <div class="image-area">
-                                        <img id="profile-img" src="assets/img/Person/1.jpg" alt="listpro">
-                                    </div>
-                                    <div class="btn-area">
-                                        <div class="btn-area-inner d-flex">
-                                            <div class="cmn-file-input">
-                                                <label for="formFile" class="form-label">Upload New
-                                                    Photo</label>
-                                                <input class="form-control" type="file" id="formFile"
-                                                    onchange="previewImage()">
-                                            </div>
-                                            <button type="button" class="cmn-btn3"
-                                                onclick="resetPreviewImage()">reset</button>
-                                        </div>
-                                        <small>Allowed JPG, GIF or PNG. Max size of 800K</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body pt-0">
+            <div class="col-xxl-8 col-xl-10 mx-auto">
 
-                            <div class="profile-form-section">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="firstname" class="form-label">First Name</label>
-                                        <input type="text" class="form-control" id="firstname">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="lastname" class="form-label">last name</label>
-                                        <input type="text" class="form-control" id="lastname">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="e-mail" class="form-label">e-mail</label>
-                                        <input type="email" class="form-control" id="e-mail">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="organization" class="form-label">organization</label>
-                                        <input type="text" class="form-control" id="organization">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="phonenumber" class="form-label">phone number</label>
-                                        <input type="text" class="form-control" id="phonenumber"
-                                            onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="address" class="form-label">address</label>
-                                        <input type="text" class="form-control" id="address">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="state" class="form-label">state</label>
-                                        <input type="text" class="form-control" id="state">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="zipcode" class="form-label">zip code</label>
-                                        <input type="text" class="form-control" id="zipcode">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">country</label>
-                                        <select class="cmn-select2" name="state">
-                                            <option value="AL">Select</option>
-                                            <option value="AL">Bangladesh</option>
-                                            <option value="WY">Australia</option>
-                                            <option value="WY">Belarus</option>
-                                            <option value="WY">Canada</option>
-                                            <option value="WY">China</option>
-                                            <option value="WY">France</option>
-                                            <option value="WY">Germany</option>
-                                            <option value="WY">India</option>
-                                            <option value="WY">Indonesia</option>
-                                            <option value="WY">Italy</option>
-                                            <option value="WY">Japan</option>
-                                            <option value="WY">Korea</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">language</label>
-                                        <select class="cmn-select2" name="state">
-                                            <option value="AL">Select Language</option>
-                                            <option value="AL">Bangla</option>
-                                            <option value="WY">English</option>
-                                            <option value="WY">French</option>
-                                            <option value="WY">German</option>
-                                            <option value="WY">China</option>
-                                            <option value="WY">France</option>
-                                            <option value="WY">Germany</option>
-                                            <option value="WY">India</option>
-                                            <option value="WY">Indonesia</option>
-                                            <option value="WY">Italy</option>
-                                            <option value="WY">Japan</option>
-                                            <option value="WY">Korea</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Time zone</label>
-                                        <select class="cmn-select2" name="state">
-                                            <option value="AL">Select Timezone</option>
-                                            <option value="WY">(GMT-12:00) International Date Line West</option>
-                                            <option value="WY">(GMT-11:00) Midway Island, Samoa</option>
-                                            <option value="WY">(GMT-10:00) Hawaii</option>
-                                            <option value="WY">(GMT-09:00) Alaska</option>
-                                            <option value="WY">(GMT-08:00) Pacific Time (US & Canada)</option>
-                                            <option value="WY">(GMT-08:00) Tijuana, Baja California</option>
-                                            <option value="WY">(GMT-07:00) Arizona</option>
-                                            <option value="WY">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
-                                            <option value="WY">(GMT-07:00) Mountain Time (US & Canada)</option>
-                                            <option value="WY">(GMT-06:00) Central America</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">currency</label>
-                                        <select class="cmn-select2" name="state">
-                                            <option value="AL">Select Currency</option>
-                                            <option value="WY">BDT</option>
-                                            <option value="WY">USD</option>
-                                            <option value="WY">Euro</option>
-                                            <option value="WY">Pound</option>
-                                            <option value="WY">bitcoin</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="btn-area d-flex g-3">
-                                    <button type="button" class="cmn-btn">save changes</button>
-                                    <button type="button" class="cmn-btn3">cancel</button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                <div class="breadcrumb-area">
+                    <h3 class="title">profile</h3>
                 </div>
-            </form>
 
+                <div class="row">
+                    <!-- Account-settings -->
+                    <!-- Account settings navbar start -->
+                    <div class="account-settings-navbar">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="account-settings-profile.html"><i
+                                        class="fa-regular fa-user"></i>profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="account-settings-notifications.html"><i
+                                        class="fa-regular fa-link"></i>Notification</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="account-settings-identity-verification.html"><i
+                                        class="fa-regular fa-link"></i> Identity Verification</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Account settings navbar end -->
+                    <form>
+                        <div class="account-settings-profile-section">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">Profile Details
+                                    </h5>
+                                    <div class="profile-details-section">
+                                        <div class="d-flex gap-3 align-items-center">
+                                            <div class="image-area">
+                                                <img id="profile-img" src="assets/img/Person/1.jpg" alt="listpro">
+                                            </div>
+                                            <div class="btn-area">
+                                                <div class="btn-area-inner d-flex">
+                                                    <div class="cmn-file-input">
+                                                        <label for="formFile" class="form-label">
+                                                            <span class="d-sm-none"><i
+                                                                    class="fa-regular fa-circle-plus"></i></span>
+                                                            <span class="d-none d-sm-block">Upload New Photo</span>
+                                                        </label>
+                                                        <input class="form-control" type="file" id="formFile"
+                                                            onchange="previewImage()">
+                                                    </div>
+                                                    <button type="button" class="cmn-btn3"
+                                                        onclick="resetPreviewImage()">reset</button>
+                                                </div>
+                                                <small>Allowed JPG, GIF or PNG. Max size of 800K</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body pt-0">
+
+                                    <div class="profile-form-section">
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label for="firstname" class="form-label">First Name</label>
+                                                <input type="text" class="form-control" id="firstname">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="lastname" class="form-label">last name</label>
+                                                <input type="text" class="form-control" id="lastname">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="e-mail" class="form-label">e-mail</label>
+                                                <input type="email" class="form-control" id="e-mail">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="organization" class="form-label">organization</label>
+                                                <input type="text" class="form-control" id="organization">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="phonenumber" class="form-label">phone number</label>
+                                                <input type="text" class="form-control" id="phonenumber"
+                                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="address" class="form-label">address</label>
+                                                <input type="text" class="form-control" id="address">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="state" class="form-label">state</label>
+                                                <input type="text" class="form-control" id="state">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="zipcode" class="form-label">zip code</label>
+                                                <input type="text" class="form-control" id="zipcode">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">country</label>
+                                                <select class="cmn-select2" name="state">
+                                                    <option value="AL">Select</option>
+                                                    <option value="AL">Bangladesh</option>
+                                                    <option value="WY">Australia</option>
+                                                    <option value="WY">Belarus</option>
+                                                    <option value="WY">Canada</option>
+                                                    <option value="WY">China</option>
+                                                    <option value="WY">France</option>
+                                                    <option value="WY">Germany</option>
+                                                    <option value="WY">India</option>
+                                                    <option value="WY">Indonesia</option>
+                                                    <option value="WY">Italy</option>
+                                                    <option value="WY">Japan</option>
+                                                    <option value="WY">Korea</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">language</label>
+                                                <select class="cmn-select2" name="state">
+                                                    <option value="AL">Select Language</option>
+                                                    <option value="AL">Bangla</option>
+                                                    <option value="WY">English</option>
+                                                    <option value="WY">French</option>
+                                                    <option value="WY">German</option>
+                                                    <option value="WY">China</option>
+                                                    <option value="WY">France</option>
+                                                    <option value="WY">Germany</option>
+                                                    <option value="WY">India</option>
+                                                    <option value="WY">Indonesia</option>
+                                                    <option value="WY">Italy</option>
+                                                    <option value="WY">Japan</option>
+                                                    <option value="WY">Korea</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Time zone</label>
+                                                <select class="cmn-select2" name="state">
+                                                    <option value="AL">Select Timezone</option>
+                                                    <option value="WY">(GMT-12:00) International Date Line West</option>
+                                                    <option value="WY">(GMT-11:00) Midway Island, Samoa</option>
+                                                    <option value="WY">(GMT-10:00) Hawaii</option>
+                                                    <option value="WY">(GMT-09:00) Alaska</option>
+                                                    <option value="WY">(GMT-08:00) Pacific Time (US & Canada)</option>
+                                                    <option value="WY">(GMT-08:00) Tijuana, Baja California</option>
+                                                    <option value="WY">(GMT-07:00) Arizona</option>
+                                                    <option value="WY">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+                                                    <option value="WY">(GMT-07:00) Mountain Time (US & Canada)</option>
+                                                    <option value="WY">(GMT-06:00) Central America</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">currency</label>
+                                                <select class="cmn-select2" name="state">
+                                                    <option value="AL">Select Currency</option>
+                                                    <option value="WY">BDT</option>
+                                                    <option value="WY">USD</option>
+                                                    <option value="WY">Euro</option>
+                                                    <option value="WY">Pound</option>
+                                                    <option value="WY">bitcoin</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="btn-area d-flex g-3">
+                                            <button type="button" class="cmn-btn">save changes</button>
+                                            <button type="button" class="cmn-btn3">cancel</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
         </div>
 
     </div>

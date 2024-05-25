@@ -1,3 +1,4 @@
+"use strict";
 // Preloader area
 const preloader = document.getElementById("preloader");
 const preloaderFunction = () => {
@@ -31,37 +32,6 @@ if (document.querySelector('.account-settings-profile-section')) {
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
-// cmn select2 start
-$(document).ready(function () {
-    $('.cmn-select2').select2();
-});
-// cmn select2 end
-
-// cmn-select2-modal
-$(".modal-select").select2({
-    dropdownParent: $("#formModal"),
-});
-
-// cmn-select2 with image start
-$(document).ready(function () {
-    $('.cmn-select2-image').select2({
-        templateResult: formatState,
-        templateSelection: formatState
-    });
-});
-
-// select2 function
-function formatState(state) {
-    if (!state.id) {
-        return state.text;
-    }
-    var baseUrl = "assets/img/mini-flag";
-    var $state = $(
-        '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.svg" class="img-flag" /> ' + state.text + '</span>'
-    );
-    return $state;
-};
-// cmn-select2 with image start
 
 
 
@@ -110,18 +80,53 @@ $(document).ready(function () {
     // Nice select end
 
 
+    // cmn select2 start
+    $(document).ready(function () {
+        $('.cmn-select2').select2();
+    });
+    // cmn select2 end
+
+    // cmn-select2-modal
+    $(".modal-select").select2({
+        dropdownParent: $("#formModal"),
+    });
+
+    // cmn-select2 with image start
+    $(document).ready(function () {
+        $('.cmn-select2-image').select2({
+            templateResult: formatState,
+            templateSelection: formatState
+        });
+    });
+
+    // select2 function
+    function formatState(state) {
+        if (!state.id) {
+            return state.text;
+        }
+        var baseUrl = "assets/img/mini-flag";
+        var $state = $(
+            '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.svg" class="img-flag" /> ' + state.text + '</span>'
+        );
+        return $state;
+    };
+    // cmn-select2 with image start
+
+    // RichTextEditor start
+    if ($('#div_editor1').length) {
+        var editor1cfg = {}
+        editor1cfg.toolbar = "basic";
+        var editor1 = new RichTextEditor("#div_editor1", editor1cfg);
+    }
+    // RichTextEditor end
+    // flatpickr start
+    flatpickr("#myID", {});
+    // flatpickr end
 });
 
-// RichTextEditor start
-if ($('#div_editor1').length) {
-    var editor1cfg = {}
-    editor1cfg.toolbar = "basic";
-    var editor1 = new RichTextEditor("#div_editor1", editor1cfg);
-}
-// RichTextEditor end
 
 
-// Modal select to input focus start
+// select to input focus start
 document.addEventListener("DOMContentLoaded", function () {
     function handleInput(inputAmountBox, inputAmountBoxInner) {
         if (inputAmountBox && inputAmountBoxInner) {
@@ -140,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             inputAmountBox.addEventListener("click", function (event) {
-                if (!event.target.closest('.icon-area') && !event.target.closest('.text-area')) {
+                if (!event.target.closest('.icon-area') && !event.target.closest('.currency-name')) {
                     inputField.focus();
                     inputField.setSelectionRange(inputField.value.length, inputField.value.length);
                 }
@@ -156,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputAmountBoxInner2 = document.getElementById("inputAmountBoxInner2");
     handleInput(inputAmountBox2, inputAmountBoxInner2);
 });
-// Modal select to input focus end
+// select to input focus end
 
 
 // Filter section start
@@ -219,7 +224,7 @@ if ($('#columnChart').length) {
         }],
         chart: {
             type: 'bar',
-            height: 350
+            height: 350,
         },
         plotOptions: {
             bar: {
@@ -245,7 +250,7 @@ if ($('#columnChart').length) {
             }
         },
         fill: {
-            opacity: 1
+            opacity: 1,
         },
         tooltip: {
             y: {

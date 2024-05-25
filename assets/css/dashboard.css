@@ -114,6 +114,9 @@ Dark theme section start
 .dark-theme .cmn-box {
   background-color: var(--bg-color2);
 }
+.dark-theme .cmn-btn2 {
+  background-color: var(--bg-color3);
+}
 .dark-theme .cmn-btn3 {
   background-color: var(--bg-color3);
   color: hsl(var(--white));
@@ -501,7 +504,7 @@ textarea.form-control {
   background: var(--btn-hover-bg);
 }
 .cmn-file-input label {
-  font-size: 16px !important;
+  font-size: 16px;
   margin-bottom: 0;
   height: 40px;
   font-weight: 500 !important;
@@ -513,6 +516,10 @@ textarea.form-control {
   justify-content: center;
   padding: 10px;
   transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 20px;
 }
 .cmn-file-input .form-control {
   cursor: pointer;
@@ -524,6 +531,11 @@ textarea.form-control {
   opacity: 0;
 }
 
+@media (max-width: 575px) {
+  .cmn-file-input label {
+    font-size: 14px;
+  }
+}
 .cmn-radio .form-check-input[type=radio]:checked + .form-check-label {
   background-color: var(--primary-color-opacity-low);
 }
@@ -953,6 +965,28 @@ body::-webkit-scrollbar-thumb:hover {
   text-transform: capitalize;
 }
 
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
 /*----------------------------------------------
 Reset section end
 ----------------------------------------------*/
@@ -1225,6 +1259,10 @@ Offcanvas section end
   color: hsl(var(--white));
 }
 
+.rtl .cmn-btn2 i {
+  transform: rotate(180deg);
+}
+
 .cmn-btn3 {
   position: relative;
   padding: 10px 20px;
@@ -1372,6 +1410,10 @@ Offcanvas section end
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.rtl .back-btn i {
+  transform: rotate(180deg);
 }
 
 .cmn-tabs {
@@ -3175,8 +3217,8 @@ Header section start
   font-weight: 500;
 }
 .header-nav .notifications {
-  inset: 8px -15px auto auto !important;
-  min-width: 340px;
+  right: -20px;
+  min-width: 310px;
 }
 .header-nav .notifications .notification-item a {
   display: flex;
@@ -3208,8 +3250,6 @@ Header section start
 }
 .header-nav .profile {
   min-width: 240px;
-  padding-bottom: 0;
-  top: 8px !important;
 }
 .header-nav .profile .dropdown-header h6 {
   font-size: 18px;
@@ -3244,14 +3284,11 @@ Header section start
 }
 
 @media (max-width: 575px) {
+  .header-nav .notifications {
+    right: -45px;
+  }
   .header-nav .nav-icons {
     gap: 10px;
-  }
-}
-@media (max-width: 400px) {
-  .header-nav .notifications {
-    inset: 8px 0 auto auto !important;
-    min-width: 320px;
   }
 }
 .rtl nav.header-nav.ms-auto {
@@ -3311,6 +3348,11 @@ Header section start
 @media (max-width: 767px) {
   .dashboard-wrapper {
     margin: 67px 10px 10px;
+    padding: 15px;
+  }
+}
+@media (max-width: 575px) {
+  .dashboard-wrapper {
     padding: 15px 10px;
   }
 }
@@ -3323,7 +3365,7 @@ Sidebar start
 ------------------------------------------------*/
 .sidebar {
   position: fixed;
-  top: 70px;
+  top: 66px;
   bottom: 0;
   width: 300px;
   z-index: 996;
@@ -3452,7 +3494,6 @@ Sidebar start
   }
 }
 .rtl .sidebar {
-  right: 0;
   border-right: none;
   border-left: 1px solid var(--border-color1);
 }
@@ -3617,6 +3658,11 @@ Main section start
   background-color: var(--primary-color-opacity-low);
 }
 
+.rtl .nice-select.right .list {
+  left: 0;
+  right: auto;
+}
+
 /*----------------------------------------------
     Cmn table section start
 ----------------------------------------------*/
@@ -3720,7 +3766,7 @@ Account settings profile section start
   margin-bottom: 0;
 }
 .account-settings-profile-section .profile-details-section .btn-area .btn-area-inner {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: flex;
 }
 .account-settings-profile-section .profile-details-section .btn-area .btn-area-inner .cmn-btn3 {
@@ -3956,6 +4002,7 @@ Payment section start
 
 .transfer-list {
   padding: 15px;
+  padding-top: 0;
   margin-bottom: 20px;
 }
 .transfer-list h5 {
@@ -4625,6 +4672,10 @@ Report section end
 /*----------------------------------------------
 Chart section start
 ----------------------------------------------*/
+.dark-theme #columnChart {
+  fill: var(--heading-color);
+}
+
 /*----------------------------------------------
 Chart section end
 ----------------------------------------------*/
